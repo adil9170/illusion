@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymity is an illusion</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Prevent scrolling during animation */
+            background-color: #282c34; /* Set initial background color */
+            transition: background-color 1s ease; /* Smooth transition effect */
+        }
+
+        h1 {
+            text-align: center;
+            color: white; /* Set text color */
+        }
+
+        @keyframes crazyAnimation {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(360deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .crazy-animation {
+            animation: crazyAnimation 2s infinite; /* Apply the animation */
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="mainHeading">Anonymity is an illusion</h1>
+
+    <script>
+        document.addEventListener('click', function() {
+            // Add the class to initiate the animation
+            document.body.classList.add('crazy-animation');
+            // Reset the animation after some time (2 seconds in this case)
+            setTimeout(function() {
+                document.body.classList.remove('crazy-animation');
+            }, 2000);
+        });
+    </script>
+
+</body>
+</html>
